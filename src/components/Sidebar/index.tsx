@@ -1,7 +1,7 @@
 import { PlusCircle } from "lucide-react";
 
 export function Sidebar() {
-    const tags = ['Criar um Novo Menu', 'Criar uma Nova Categoria', 'Criar um Novo Produto']
+    const tags = ['Criar um Novo Cardápio', 'Criar uma Nova Categoria', 'Criar um Novo Produto']
     return (
         <aside className="m-auto w-4/5 justify-between lg:flex lg:flex-row">
             {
