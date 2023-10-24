@@ -2,10 +2,11 @@
 
 import { MenuProtocol } from '@/protocols'
 import './style.css'
+import Link from 'next/link'
 
 interface Props {
     data: [MenuProtocol]
-  }
+}
 
 export function Menu(props: Props) {
 
@@ -15,13 +16,15 @@ export function Menu(props: Props) {
                 Cardápios disponíveis para seu horário
             </p>
 
-            {(props.data).map((item: MenuProtocol) => (
-                <div key={item.id} className=" flex flex-wrap m-auto mt-10 w-4/5 ">
-                    <div className="w-40 h-40 flex justify-center items-center transition ease-in-out delay-150 border shadow-md rounded-md hover:-translate-y-1 hover:scale-110 hover:shadow-cyan-500/50 duration-300 hover:cursor-pointer">
-                        <p> {item.name} </p>
-                    </div>
-                </div>
-            ))}
+            <div className=" flex flex-wrap m-auto mt-10 w-4/5 ">
+                {(props.data).map((item: MenuProtocol) => (
+                    <Link key={item.id} href={`/menu/${item.id}`}>
+                        <div className="w-40 h-40 flex justify-center items-center transition ease-in-out delay-150 border shadow-md rounded-md hover:-translate-y-1 hover:scale-110 hover:shadow-cyan-500/50 duration-300 hover:cursor-pointer">
+                            <p> {item.name} </p>
+                        </div>
+                    </Link>
+                ))}
+            </div>
         </div>
     )
 }
