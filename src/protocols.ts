@@ -1,4 +1,4 @@
-export type Menu = {
+export type MenuProtocol = {
     id: string,
     name: string,
     type: 'diurno' | 'noturno'
