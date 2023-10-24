@@ -18,8 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-          <div> <Header />  </div>
-          {children}
+          <div className='fixed z-50'> <Header />  </div>
+          <div className='relative top-24'>{children} </div>
+          
       </body>
     </html>
   )

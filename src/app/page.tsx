@@ -1,9 +1,6 @@
-'use client'
-
 import { Menu } from "@/components/Menu"
 import { Sidebar } from "@/components/Sidebar"
 import { getMenu } from "@/services/menuApi"
-import { useEffect, useState } from "react"
 
 async function getData() {
 
