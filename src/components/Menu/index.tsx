@@ -1,7 +1,6 @@
 'use client'
 
 import { MenuProtocol } from '@/protocols'
-import './style.css'
 import Link from 'next/link'
 
 interface Props {
@@ -11,7 +10,7 @@ interface Props {
 export function Menu(props: Props) {
 
     return (
-        <div className=" m-auto mt-10 w-4/5 p-3 border-2 border-zinc-500 rounded shadow-lg shadow-stone-500">
+        <div className=" mt-10 p-3 border-2 border-zinc-500 rounded shadow-lg shadow-stone-500">
             <p className="mt-4 text-center md:text-5xl lg:text-6x ">
                 Cardápios disponíveis para seu horário
             </p>
