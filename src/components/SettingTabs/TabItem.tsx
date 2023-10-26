@@ -13,13 +13,13 @@ interface TabItemProps {
 
 export function TabItem({ value, title, isSelected }: TabItemProps) {
     return (
-        <Tabs.Trigger value={value} className="relative px-1 pb-4 text-zinc-500 hover:text-violet-700 " >
+        <Tabs.Trigger value={value} className="relative px-1 pb-4 text-zinc-500 hover:text-orange-700 " >
             <span className="text-2xl antialiased font-medium"> {title} </span>
 
             {isSelected && (
                 <>
-                    < motion.div layoutId="activeTab" className="absolute -bottom-px left-0 right-0 h-1 bg-black" />
-                    <div className="absolute -bottom-px left-0 right-0 h-1 bg-black " />
+                    < motion.div layoutId="activeTab" className="absolute -bottom-px left-0 right-0 h-1 bg-orange-600" />
+                    <div className="absolute -bottom-px left-0 right-0 h-1 bg-orange-600 " />
 
                 </>
 
