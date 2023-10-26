@@ -1,7 +1,7 @@
 'use client'
 
 import { postCategory } from "@/services/categoriaApi";
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import { useState, FormEvent } from "react";
 import Buttons from "../Buttons";
 

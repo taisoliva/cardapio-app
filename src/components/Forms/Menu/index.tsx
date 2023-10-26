@@ -1,7 +1,7 @@
 'use client'
 
 import { postMenu } from "@/services/menuApi";
-import { Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material";
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material";
 import { useState, FormEvent } from "react";
 import Buttons from "../Buttons";
 
@@ -29,9 +29,11 @@ export default function FormMenu() {
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setDisabled(true)
 
         if (name === '') {
             setError(true)
+            setDisabled(false)
         } else {
 
             setError(false)
@@ -45,9 +47,10 @@ export default function FormMenu() {
         try {
             const promise = await postMenu(body)
            console.log(promise)
+           setDisabled(false)
         } catch (error) {
-
-            console.log("deu ruim", error)
+            setDisabled(false)
+            console.log(error)
         }
     };
 
