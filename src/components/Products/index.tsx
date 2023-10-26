@@ -13,7 +13,7 @@ interface Category {
 
 export default function Products({ data }: { data: Category[] }) {
   const [click, setClick] = useState<boolean>(false)
-  const [selectProduct, setSelectProduct] = useState<Product>()
+  const [selectProduct, setSelectProduct] = useState<Product | undefined>()
 
   function handleProduct(product: Product) {
     setClick(!click)
