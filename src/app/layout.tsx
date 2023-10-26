@@ -17,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='antialiased'>
-      <body className={inter.className}>
-        <div className='fixed z-50'> <Header />  </div>
+      <body className="bg-blue-50">
+        <div className='fixed top-0 z-50'> <Header />  </div>
         <div className='relative top-24 w-4/5 m-auto'>{children} </div>
       </body>
     </html>
