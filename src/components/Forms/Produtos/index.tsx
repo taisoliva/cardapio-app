@@ -8,6 +8,7 @@ import { handleCategoryChange, handleDescriptionChange, handleImageChange, handl
 import { handleSubmit } from "./handle-submit";
 import { useRouter } from "next/navigation";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import Buttons from "../Buttons";
 
 interface Props {
     dataMenus: [MenuProtocol],
@@ -103,10 +104,7 @@ export default function FormProdutos({ dataMenus, dataCategory }: Props) {
                 </TextField>
             </div>
 
-            <div className="flex mt-2 p-1">
-                <Button  onClick={() => router.push('/')} style={{ marginRight: '20px', backgroundColor: 'black' }} variant="contained">Cancelar</Button>
-                <Button disabled={disabled} variant="outlined" type="submit">Salvar</Button>
-            </div>
+            <Buttons disabled = {disabled}/>
         </form >
 
     )

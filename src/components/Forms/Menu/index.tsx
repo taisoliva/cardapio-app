@@ -3,6 +3,7 @@
 import { postMenu } from "@/services/menuApi";
 import { Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material";
 import { useState, FormEvent } from "react";
+import Buttons from "../Buttons";
 
 
 interface Options {
@@ -16,6 +17,7 @@ export default function FormMenu() {
     const [name, setName] = useState<string>('')
     const [selectedOption, setSelectedOption] = useState<string>('diurno')
     const [isError, setError] = useState<boolean>(false)
+    const [disabled, setDisabled] = useState<boolean>(false)
 
     const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value);
@@ -67,10 +69,7 @@ export default function FormMenu() {
                 </FormControl>
             </div>
 
-            <div className="flex mt-2 p-1">
-                <Button style={{ marginRight: '20px', backgroundColor: 'black' }} variant="contained">Cancelar</Button>
-                <Button variant="outlined" type="submit">Salvar</Button>
-            </div>
+            <Buttons disabled={disabled}/>
         </form>
     )
 }

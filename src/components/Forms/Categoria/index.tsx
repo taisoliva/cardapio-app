@@ -1,21 +1,15 @@
 'use client'
 
 import { postCategory } from "@/services/categoriaApi";
-import { postMenu } from "@/services/menuApi";
-import { Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { useState, FormEvent } from "react";
-
-
-interface Options {
-    diurno: boolean;
-    noturno: boolean;
-}
-
+import Buttons from "../Buttons";
 
 export default function FormCategoria() {
 
     const [name, setName] = useState<string>('')
     const [isError, setError] = useState<boolean>(false)
+    const [disabled, setDisabled] = useState<boolean>(false)
 
     const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value);
@@ -23,25 +17,29 @@ export default function FormCategoria() {
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setDisabled(true)
 
         if (name === '') {
             setError(true)
+            setDisabled(false)
         } else {
 
             setError(false)
+            const body = {
+                name,
+            }
+
+            try {
+                const promise = await postCategory(body)
+                console.log(promise)
+                setDisabled(false)
+            } catch (error) {
+
+                console.log(error)
+                setDisabled(false)
+            }
         }
 
-        const body = {
-            name,
-        }
-
-        try {
-            const promise = await postCategory(body)
-            console.log(promise)
-        } catch (error) {
-
-            console.log("deu ruim", error)
-        }
     };
 
     return (
@@ -50,10 +48,7 @@ export default function FormCategoria() {
                 error={isError}
                 helperText={isError && "Preencha com o nome"} />
 
-            <div className="flex mt-2 p-1">
-                <Button style={{ marginRight: '20px', backgroundColor: 'black' }} variant="contained">Cancelar</Button>
-                <Button variant="outlined" type="submit">Salvar</Button>
-            </div>
+            <Buttons disabled={disabled}/>
         </form>
     )
 }
