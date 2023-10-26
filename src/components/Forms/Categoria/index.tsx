@@ -25,7 +25,6 @@ export default function FormCategoria() {
     if (name === '') {
       setError(true)
       setDisabled(false)
-      router.push('/')
     } else {
       setError(false)
       const body = {
