@@ -7,7 +7,7 @@ export function Sidebar() {
         <aside className="justify-between lg:flex lg:flex-row">
             {
                 tags.map((item, index) => (
-                    <Link key={index} href={`/form`}>
+                    <Link key={index} href={`/criar`}>
                         <div  className="flex border-2 rounded 
                             text-black
                             border-slate-800 

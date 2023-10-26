@@ -6,6 +6,11 @@ export async function getMenu(type: string) {
     return response
 }
 
+export async function getAllMenus() {
+    const response = await api.get(`/menu`)
+    return response
+}
+
 export async function getMenuId(id: string) {
     const response = await api.get(`/menu/${id}`)
     return response

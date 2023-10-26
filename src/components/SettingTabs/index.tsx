@@ -5,11 +5,20 @@ import { TabItem } from "./TabItem";
 import { useState } from 'react';
 import '@radix-ui/themes/styles.css';
 import FormMenu from "../Forms/Menu";
+import FormCategoria from "../Forms/Categoria";
+import FormProdutos from "../Forms/Produtos";
+import { CategoryProtocol, MenuProtocol } from "@/protocols";
 
-export function SettingTabs() {
+
+interface Props {
+    dataMenus: [MenuProtocol],
+    dataCategory: [CategoryProtocol]
+}
+
+export function SettingTabs({dataMenus, dataCategory}: Props) {
 
     const [currentTab, setCurrentTab] = useState('tab1')
-   
+
     
     return (
 
@@ -26,11 +35,11 @@ export function SettingTabs() {
                 </Tabs.Content>
 
                 <Tabs.Content value="tab2">
-                    <div> Ola tab2 </div>
+                    <FormCategoria />
                 </Tabs.Content>
 
                 <Tabs.Content value="tab3">
-                    <div> Ola tab3 </div>
+                    <FormProdutos dataMenus={dataMenus} dataCategory={dataCategory}/>
                 </Tabs.Content>
             </Box>
         </Tabs.Root>
