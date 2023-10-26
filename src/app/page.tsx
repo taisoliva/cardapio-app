@@ -1,7 +1,30 @@
-export default function Home() {
-  return (
-   <div>
+import { Menu } from "@/components/Menu"
+import { Sidebar } from "@/components/Sidebar"
+import { getMenu } from "@/services/menuApi"
+
+async function getData() {
+
+    const hour = new Date().getHours()
+    let type = ''
     
-   </div>
-  )
+    if(hour >= 18 || hour < 6){
+        type = 'noturno'
+    } else {
+        type = 'diurno'
+    }   
+
+    const res = await getMenu(type)
+    return res.data
+}
+
+export default async function Home() {
+
+    const data = await getData()
+
+    return (
+        <>
+            <Sidebar />
+            <Menu data={data}/>
+        </>
+    )
 }
