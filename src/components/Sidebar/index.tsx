@@ -5,7 +5,7 @@ export function Sidebar() {
     return (
         <aside className="justify-between lg:flex lg:flex-row">
             <Link href={`/criar`}>
-                <div className="flex border-2 rounded 
+                <div className="flex justify-center items-center border-2 rounded 
                             text-black
                             border-slate-800 
                             hover:border-zinc-700 
@@ -17,8 +17,8 @@ export function Sidebar() {
                             font-medium 
                             p-4
                             mb-2">
-                    <PlusCircle className="mr-2" />
-                    <p> Criar um Novo </p>
+                    <PlusCircle className="mr-2 text-3xl md:text-5xl lg:text-6x" />
+                    <p className="text-3xl md:text-5xl lg:text-6x"> Criar um Novo </p>
                 </div>
             </Link>
         </aside>
