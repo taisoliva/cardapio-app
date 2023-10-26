@@ -1,30 +1,28 @@
-import { Menu } from "@/components/Menu"
-import { Sidebar } from "@/components/Sidebar"
-import { getMenu } from "@/services/menuApi"
+import { Menu } from '@/components/Menu'
+import { Sidebar } from '@/components/Sidebar'
+import { getMenu } from '@/services/menuApi'
 
 async function getData() {
+  const hour = new Date().getHours()
+  let type = ''
 
-    const hour = new Date().getHours()
-    let type = ''
-    
-    if(hour >= 18 || hour < 6){
-        type = 'noturno'
-    } else {
-        type = 'diurno'
-    }   
+  if (hour >= 18 || hour < 6) {
+    type = 'noturno'
+  } else {
+    type = 'diurno'
+  }
 
-    const res = await getMenu(type)
-    return res.data
+  const res = await getMenu(type)
+  return res.data
 }
 
 export default async function Home() {
+  const data = await getData()
 
-    const data = await getData()
-
-    return (
-        <>
-            <Sidebar />
-            <Menu data={data}/>
-        </>
-    )
+  return (
+    <>
+      <Sidebar />
+      <Menu data={data} />
+    </>
+  )
 }

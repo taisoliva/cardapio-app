@@ -1,16 +1,15 @@
-import { ProductsProtocol } from "@/protocols";
+import { ProductsProtocol } from '@/protocols'
 
-type ArrayError = string[] 
+type ArrayError = string[]
 
-export function fieldsEmpty(body : Omit<ProductsProtocol, 'id'>){
+export function fieldsEmpty(body: Omit<ProductsProtocol, 'id'>) {
+  const array = []
 
-    const array = []
-
-    for(const key in body){
-        if(body[key] === ''){
-            array.push(key)
-        }
+  for (const key in body) {
+    if (body[key] === '') {
+      array.push(key)
     }
+  }
 
-    return array
+  return array
 }
