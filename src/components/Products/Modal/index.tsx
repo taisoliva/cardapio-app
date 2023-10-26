@@ -11,14 +11,14 @@ export default function Modal({selectProduct, setClick} : { selectProduct?: Prod
 
     return (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center" >
-            <div className="flex flex-col  bg-blue-300 w-1/2 h-1/2 shadow-2xl rounded-lg shadow-black  ">
+            <div className="flex flex-col  bg-blue-200 w-1/2 h-1/2 shadow-2xl rounded-lg shadow-black  ">
                 <div className="flex w-full justify-end p-1 text-red-600 hover:cursor-pointer" onClick={() => { setClick(false) }}> <XSquare /> </div>
                 <div className="h-4/5 p-1 flex">
-                    <img className="w-1/2 h-full rounded border-2" src={selectProduct?.image} />
-                    <div className="flex flex-col justify-center items-center w-full">
-                        <p> {selectProduct?.name}</p>
-                        <p> {selectProduct?.description}</p>
-                        <p> {selectProduct?.price}</p>
+                    <img className="w-1/2 h-full rounded border-2 mr-2" src={selectProduct?.image} />
+                    <div className="flex flex-col justify-center items-center w-full font-medium">
+                        <p className="mb-2"> {selectProduct?.name}</p>
+                        <p className="mb-2"> {selectProduct?.description}</p>
+                        <p> {`R$ ${((selectProduct?.price)/100).toFixed(2)}`}</p>
 
                     </div>
                 </div>

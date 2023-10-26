@@ -3,7 +3,7 @@ import { PlusCircle } from "lucide-react";
 export default function Loading() {
     return (
         <aside className="m-auto w-4/5 justify-between lg:flex lg:flex-row ">
-                    <div className="flex items-center border-2 rounded  animate-pulse
+            <div className="flex items-center border-2 rounded  animate-pulse
                             text-black
                             border-slate-800 
                             hover:border-slate-500 

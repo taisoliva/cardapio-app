@@ -1,4 +1,4 @@
-import { Category, Product } from "@/protocols";
+import { Product } from "@/protocols";
 
 export default function ItemProduct({ id, name, image, price, description } : Omit<Product, 'menuId' | 'categoryId' >) {
     return (

@@ -27,7 +27,7 @@ export default function Products({ data }: { data: Category[] }) {
             <div className={`w-full mt-4 ${click ? 'opacity-10' : ""}`}>
                 {data.map((item) => (
                     <div key={item.id}>
-                        <p className="border-b-2 mb-3">{item.name}</p>
+                        <p className="border-b-2 mb-3 font-medium ">{item.name}</p>
                         <div className=" flex flex-wrap justify-center ">
                             {
                                 (item.products).map((product) => (

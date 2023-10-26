@@ -8,9 +8,11 @@ export function Sidebar() {
                 <div className="flex border-2 rounded 
                             text-black
                             border-slate-800 
-                            hover:border-slate-500 
+                            hover:border-zinc-700 
                             hover:cursor-pointer 
-                            hover:text-slate-700
+                            hover:text-slate-900
+                            hover:shadow-lg 
+                            hover:shadow-zinc-500/50
                             font-sans 
                             font-medium 
                             p-4

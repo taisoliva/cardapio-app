@@ -29,7 +29,7 @@ export default async function MenuId({ params }: { params: { id: string } }) {
 
    return (
       <div className="">
-         <h1> {dataMenu.name} </h1>
+         <h1 className="font-medium text-xl" > {dataMenu.name} </h1>
 
 
          <Products data={data} />
