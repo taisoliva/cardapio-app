@@ -11,12 +11,16 @@ import {
 } from '@mui/material'
 import { useState, FormEvent } from 'react'
 import Buttons from '../Buttons'
+import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
+import { useRouter } from 'next/navigation'
 
 export default function FormMenu() {
   const [name, setName] = useState<string>('')
   const [selectedOption, setSelectedOption] = useState<string>('diurno')
   const [isError, setError] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
+
+  const router: AppRouterInstance = useRouter()
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -33,6 +37,7 @@ export default function FormMenu() {
     if (name === '') {
       setError(true)
       setDisabled(false)
+      router.push('/')
     } else {
       setError(false)
     }
@@ -46,6 +51,7 @@ export default function FormMenu() {
       const promise = await postMenu(body)
       console.log(promise)
       setDisabled(false)
+      router.push('/')
     } catch (error) {
       setDisabled(false)
       console.log(error)
