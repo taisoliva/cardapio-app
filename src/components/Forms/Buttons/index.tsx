@@ -7,14 +7,6 @@ interface ButtonsProps {
   disabled: boolean
 }
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#EA580B', // Define a cor laranja
-    },
-    mode: 'dark',
-  },
-})
 export default function Buttons({ disabled }: ButtonsProps) {
   const router: AppRouterInstance = useRouter()
 
@@ -27,16 +19,14 @@ export default function Buttons({ disabled }: ButtonsProps) {
       >
         Cancelar
       </Button>
-      <ThemeProvider theme={theme}>
-        <Button
-          color="primary"
-          disabled={disabled}
-          variant="outlined"
-          type="submit"
-        >
-          Salvar
-        </Button>
-      </ThemeProvider>
+      <Button
+        color="primary"
+        disabled={disabled}
+        variant="outlined"
+        type="submit"
+      >
+        Salvar
+      </Button>
     </div>
   )
 }

@@ -4,11 +4,15 @@ import { postCategory } from '@/services/categoriaApi'
 import { TextField } from '@mui/material'
 import { useState, FormEvent } from 'react'
 import Buttons from '../Buttons'
+import { useRouter } from 'next/navigation'
+import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 
 export default function FormCategoria() {
   const [name, setName] = useState<string>('')
   const [isError, setError] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
+
+  const router: AppRouterInstance = useRouter()
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -31,6 +35,7 @@ export default function FormCategoria() {
         const promise = await postCategory(body)
         console.log(promise)
         setDisabled(false)
+        router.push('/')
       } catch (error) {
         console.log(error)
         setDisabled(false)
