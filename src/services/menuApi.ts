@@ -6,9 +6,16 @@ interface Menu {
   type: string
 }
 
-export async function getMenu(type: string) {
-  const response = await api.get(`/menu?type=${type}`)
-  return response
+export async function getMenu(query: string) {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_LOCAL}/menu?type=${query}`,
+    {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  )
+  const data = await response.json()
+  return data
 }
 
 export async function getAllMenus() {
@@ -22,16 +29,14 @@ export async function getMenuId(id: string) {
 }
 
 export async function postMenu(body: Menu) {
-  const response = await axios.post(
-    `${process.env.NEXT_PUBLIC_LOCAL}/menu`,
-    body,
-    {
-      headers: {
-        'Content-Type': 'application/json', // Certifique-se de definir o tipo de conteúdo como JSON se você estiver enviando dados JSON
-        // ... outras informações de cabeçalho, se necessário
-      },
+  const response = await fetch(`${process.env.NEXT_PUBLIC_LOCAL}/menu`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
     },
-  )
+    body: JSON.stringify(body),
+    cache: 'no-store',
+  })
 
   return response
 }

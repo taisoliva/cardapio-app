@@ -39,7 +39,7 @@ export const handleSubmit = async (
       setDisabled(false)
       router.push('/')
     } catch (error) {
-      console.log(error)
+      alert('Não foi possível criar')
       setDisabled(false)
     }
   }

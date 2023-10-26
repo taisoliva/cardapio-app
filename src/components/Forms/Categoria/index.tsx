@@ -6,8 +6,13 @@ import { useState, FormEvent } from 'react'
 import Buttons from '../Buttons'
 import { useRouter } from 'next/navigation'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
+import { toast } from 'react-toastify'
 
-export default function FormCategoria() {
+export default function FormCategoria({
+  setCurrentTab,
+}: {
+  setCurrentTab: (value: string) => void
+}) {
   const [name, setName] = useState<string>('')
   const [isError, setError] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
@@ -35,7 +40,7 @@ export default function FormCategoria() {
         const promise = await postCategory(body)
         console.log(promise)
         setDisabled(false)
-        router.push('/')
+        setCurrentTab('tab3')
       } catch (error) {
         console.log(error)
         setDisabled(false)
