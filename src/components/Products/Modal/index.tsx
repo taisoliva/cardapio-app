@@ -5,7 +5,7 @@ export default function Modal({
   selectProduct,
   setClick,
 }: {
-  selectProduct: Product
+  selectProduct: Product | undefined
   setClick: (value: boolean) => void
 }) {
   function handleOrder(produto?: Product) {
@@ -33,16 +33,13 @@ export default function Modal({
           />
           <div className="flex flex-col justify-center items-center w-full font-medium">
             <p className="mb-2 text-xs md:text-3xl text-center">
-              {' '}
               {selectProduct?.name}
             </p>
             <p className="mb-2 text-center text-xs md:text-lg">
-              {' '}
               {selectProduct?.description}
             </p>
             <p className="text-xs md:text-3xl">
-              {' '}
-              {`R$ ${(selectProduct.price / 100).toFixed(2)}`}
+              {selectProduct && `R$ ${(selectProduct.price / 100).toFixed(2)}`}
             </p>
           </div>
         </div>
