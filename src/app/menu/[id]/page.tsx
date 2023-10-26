@@ -1,32 +1,40 @@
+import Products from "@/components/Products"
+import { getCategory } from "@/services/categoriaApi"
 import { getMenuId } from "@/services/menuApi"
+import { manipulateData } from "@/utils/manipulateData"
 
 
-async function  loadMenuId(id: string) {
+async function loadMenuId(id: string) {
    const res = await getMenuId(id)
    return res.data
-   
+
 }
 
-async function loadCategorias() {
-   
+async function loadCategory() {
+   try {
+      const res = await getCategory()
+      return res.data
+   } catch (error) {
+      console.log(error)
+   }
 }
+
 
 export default async function MenuId({ params }: { params: { id: string } }) {
 
-   const data = await loadMenuId(params.id)
-   console.log(data)
+   const dataMenu = await loadMenuId(params.id)
+   const dataCategory = await loadCategory()
 
-      return (
-         <div className="w-4/5 m-auto ">
-            <h1> {data.name}</h1>
+   const data = manipulateData(dataMenu, dataCategory)
 
-            <div>
-               <img src={data.products[0].image}/>
-            </div>
+   return (
+      <div className="">
+         <h1> {dataMenu.name} </h1>
 
-            <div>
-               <img src={data.products[0].image}/>
-            </div>
-         </div>
-      )
-   }
+
+         <Products data={data} />
+
+
+      </div>
+   )
+}

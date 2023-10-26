@@ -21,3 +21,18 @@ export type ProductsProtocol = {
     categoryId: string
 }
 
+export interface Category {
+    id: string;
+    name: string;
+    products: Product[];
+}
+
+export interface Product {
+    id: string;
+    name: string;
+    price: number;
+    image: string;
+    description: string;
+    menuId: string;
+    categoryId: string;
+}
