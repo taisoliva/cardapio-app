@@ -26,8 +26,11 @@ export default async function MenuId({ params }: { params: { id: string } }) {
   return (
     <div className="">
       <h1 className="font-medium text-xl"> {dataMenu.name} </h1>
-
-      <Products data={data} />
+      {data.length === 0 ? (
+        'Não temos ainda produtos cadastrados'
+      ) : (
+        <Products data={data} />
+      )}
     </div>
   )
 }

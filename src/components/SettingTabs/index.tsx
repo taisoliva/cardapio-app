@@ -39,11 +39,11 @@ export function SettingTabs({ dataMenus, dataCategory }: Props) {
 
       <Box>
         <Tabs.Content value="tab1">
-          <FormMenu />
+          <FormMenu setCurrentTab={setCurrentTab} />
         </Tabs.Content>
 
         <Tabs.Content value="tab2">
-          <FormCategoria />
+          <FormCategoria setCurrentTab={setCurrentTab} />
         </Tabs.Content>
 
         <Tabs.Content value="tab3">

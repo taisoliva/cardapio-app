@@ -11,16 +11,18 @@ import {
 } from '@mui/material'
 import { useState, FormEvent } from 'react'
 import Buttons from '../Buttons'
-import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
-import { useRouter } from 'next/navigation'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
-export default function FormMenu() {
+export default function FormMenu({
+  setCurrentTab,
+}: {
+  setCurrentTab: (value: string) => void
+}) {
   const [name, setName] = useState<string>('')
   const [selectedOption, setSelectedOption] = useState<string>('diurno')
   const [isError, setError] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
-
-  const router: AppRouterInstance = useRouter()
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -39,21 +41,19 @@ export default function FormMenu() {
       setDisabled(false)
     } else {
       setError(false)
-    }
+      const body = {
+        name,
+        type: selectedOption,
+      }
 
-    const body = {
-      name,
-      type: selectedOption,
-    }
-
-    try {
       const promise = await postMenu(body)
-      console.log(promise)
-      setDisabled(false)
-      router.push('/')
-    } catch (error) {
-      setDisabled(false)
-      console.log(error)
+      if (promise.ok) {
+        setDisabled(false)
+        setCurrentTab('tab2')
+      } else {
+        setDisabled(false)
+        alert('Não foi possível criar o Menu')
+      }
     }
   }
 

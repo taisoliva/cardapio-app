@@ -13,7 +13,7 @@ async function getData() {
   const BrasiliaTime = parseInt(dayjs().format('HH'))
   const query = BrasiliaTime >= 18 || BrasiliaTime < 6 ? 'noturno' : 'diurno'
   const res = await getMenu(query)
-  return res.data
+  return res
 }
 
 export default async function Home() {
