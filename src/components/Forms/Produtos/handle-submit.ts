@@ -32,7 +32,7 @@ export const handleSubmit = async (
     setCategoryError(array.includes('categoryId'))
     setDisabled(false)
   } else {
-    // @ts-ignore
+    // @ts-expect-error estou fazendo a conversão para number para poder enviar ao banco de dados
     body.price = parseInt(body.price.replace('.', ''), 10)
     try {
       await postProducts(body)

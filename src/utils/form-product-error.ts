@@ -1,7 +1,5 @@
 import { ProductsProtocol } from '@/protocols'
 
-type ArrayError = string[]
-
 export function fieldsEmpty(body: Omit<ProductsProtocol, 'id'>) {
   const array = []
 
