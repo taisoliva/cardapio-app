@@ -5,16 +5,12 @@ import { manipulateData } from '@/utils/manipulateData'
 
 async function loadMenuId(id: string) {
   const res = await getMenuId(id)
-  return res.data
+  return res
 }
 
 async function loadCategory() {
-  try {
-    const res = await getCategory()
-    return res.data
-  } catch (error) {
-    console.log(error)
-  }
+  const res = await getCategory()
+  return res
 }
 
 export default async function MenuId({ params }: { params: { id: string } }) {

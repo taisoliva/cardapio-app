@@ -17,8 +17,8 @@ import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.share
 import Buttons from '../Buttons'
 
 interface Props {
-  dataMenus: [MenuProtocol]
-  dataCategory: [CategoryProtocol]
+  dataMenus: MenuProtocol[]
+  dataCategory: CategoryProtocol[]
 }
 
 export default function FormProdutos({ dataMenus, dataCategory }: Props) {

@@ -3,21 +3,13 @@ import { getCategory } from '@/services/categoriaApi'
 import { getAllMenus } from '@/services/menuApi'
 
 async function loadMenus() {
-  try {
-    const res = await getAllMenus()
-    return res.data
-  } catch (error) {
-    console.log(error)
-  }
+  const res = await getAllMenus()
+  return res
 }
 
 async function loadCategory() {
-  try {
-    const res = await getCategory()
-    return res.data
-  } catch (error) {
-    console.log(error)
-  }
+  const res = await getCategory()
+  return res
 }
 
 export default async function Forms() {
