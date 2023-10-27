@@ -10,7 +10,8 @@ async function getData() {
   dayjs.extend(timezone)
   dayjs.tz.setDefault('America/Sao_Paulo')
 
-  const BrasiliaTime = parseInt(dayjs().format('HH'))
+  const BrasiliaTime = parseInt(dayjs().tz('America/Sao_Paulo').format('HH'))
+  console.log(BrasiliaTime)
   const query = BrasiliaTime >= 18 || BrasiliaTime < 6 ? 'noturno' : 'diurno'
   const res = await getMenu(query)
   return res
