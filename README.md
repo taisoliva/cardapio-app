@@ -51,6 +51,6 @@ A aplicação conta com as seguintes páginas:
 2. Na criação de uma Categória é obrigatório passar um nome.
 3. No Produto todos os campos são obrigatórios, mas se atente para:
      - 3.1 O preço é separado por ponto e não vírgula
-     - 3.2 A image precisa ser uma URL válida, verifique se começa com http por exemplo;
+     - 3.2 A imagem precisa ser uma URL válida, verifique se começa com http por exemplo;
      - 3.3 A descrição é breve limitada a 150 caracters;
      - 3.4 A categoria e o Menu são selecionados mediante aos dados do banco.
