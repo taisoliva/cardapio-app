@@ -1,7 +1,7 @@
-import { Button } from '@mui/material'
+import { Button, CircularProgress } from '@mui/material'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 import { useRouter } from 'next/navigation'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { Oval } from 'react-loader-spinner'
 
 interface ButtonsProps {
   disabled: boolean
@@ -19,14 +19,22 @@ export default function Buttons({ disabled }: ButtonsProps) {
       >
         Cancelar
       </Button>
-      <Button
-        color="primary"
-        disabled={disabled}
-        variant="outlined"
-        type="submit"
-      >
-        Salvar
-      </Button>
+
+      {disabled ? (
+        <Button>
+          {' '}
+          <CircularProgress />{' '}
+        </Button>
+      ) : (
+        <Button
+          color="primary"
+          disabled={disabled}
+          variant="outlined"
+          type="submit"
+        >
+          Salvar
+        </Button>
+      )}
     </div>
   )
 }

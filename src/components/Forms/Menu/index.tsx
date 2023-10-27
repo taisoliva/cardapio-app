@@ -50,9 +50,11 @@ export default function FormMenu({
 
       const promise = await postMenu(body)
       if (promise.ok) {
-        setDisabled(false)
         router.push('/criar')
-        setCurrentTab('tab2')
+        setTimeout(() => {
+          setCurrentTab('tab2')
+          setDisabled(false)
+        }, 3000)
       } else {
         setDisabled(false)
         alert('Não foi possível criar o Menu')
