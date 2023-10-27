@@ -24,7 +24,7 @@ A maior dificuldade que enfrentei ao realizar o desafio foi entender a diferenç
 
 Daqui há 5 anos!! Uau, é uma pergunta boa. Bom ao longo desses 5 anos eu me vejo ampliando meus conhecimentos em desenvolvimento, aprofundando os conhecimentos de Node.js. Me vejo também explorando um pouco do universo mobile, como conheço o React começaria vendo o React Native e só depois de entender ele bem explorar outros tipos de linguagem. Em 5 anos me vejo numa posição mais estável dentro da carreira. 
 
-Não consigo dizer exatamente após 5 anos, mas me vejo a cada mês e ano melhorando cada vez mais meus conhecimentos, encarando sempre novos desafios, e procurando aprender coisas novas. Quero aperfoiçoar o Node, e conhecer outras linguagens também, computação é assim cada dia uma nova atualização e nós como desenvolvedores precisamos nos atualizar sempre. 
+Não consigo dizer exatamente, mas me vejo a cada mês e ano melhorando cada vez mais meus conhecimentos, encarando sempre novos desafios, e procurando aprender coisas novas. Quero aperfoiçoar o Node, e conhecer outras linguagens também, computação é assim cada dia uma nova atualização e nós como desenvolvedores precisamos nos atualizar sempre. 
 
 Então em um resumo desses 5 anos, minha vida será uma grande atualização constante, onde cada dia desses 5 anos buscarei aprender cada vez. 
 
