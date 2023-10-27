@@ -53,4 +53,4 @@ A aplicação conta com as seguintes as seguintes páginas:
      - 3.1 O preço é separado por ponto e não vírgula
      - 3.2 A image precisa ser uma URL válida, verifique se começa com http por exemplo.
      - 3.3 A descrição é breve limitada a 150 caracters
-     - 3.4 A categoria e o Menu sãi os que já estão cadastrados anteriormente.
+     - 3.4 A categoria e o Menu são os que já estão cadastrados anteriormente.
