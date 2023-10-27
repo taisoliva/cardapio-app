@@ -12,11 +12,11 @@ A aplicação conta com as seguintes as seguintes páginas:
 - Você pode experimentar a aplicação clicando <a href="https://cardapio-app-9dq9.vercel.app/" > aqui</a>
 <table style="width: 100%;">
   <tr>
-    <td style="width: 20%;"><img width="100%" src="./src/assets/1.png" /></td>
-    <td style="width: 20%;"><img width="100%" src="./src/assets/2.png" /></td>
-    <td style="width: 20%;"><img width="100%" src="./src/assets/3.png" /></td>
-    <td style="width: 20%;"><img width="100%" src="./src/assets/4.png" /></td>
-    <td style="width: 20%;"><img width="100%" src="./src/assets/5.png" /></td>
+    <td style="width: 40%;"><img width="100%" src="./src/assets/1.png" /></td>
+    <td style="width: 40%;"><img width="100%" src="./src/assets/2.png" /></td>
+    <td style="width: 40%;"><img width="100%" src="./src/assets/3.png" /></td>
+    <td style="width: 40%;"><img width="100%" src="./src/assets/4.png" /></td>
+    <td style="width: 40%;"><img width="100%" src="./src/assets/5.png" /></td>
   </tr>
 </table>
 
