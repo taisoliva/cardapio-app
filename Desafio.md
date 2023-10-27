@@ -26,5 +26,5 @@ Daqui há 5 anos!! Uau, é uma pergunta boa. Bom ao longo desses 5 anos eu me ve
 
 Não consigo dizer exatamente, mas me vejo a cada mês e ano melhorando cada vez mais meus conhecimentos, encarando sempre novos desafios, e procurando aprender coisas novas. Quero aperfoiçoar o Node, e conhecer outras linguagens também, computação é assim cada dia uma nova atualização e nós como desenvolvedores precisamos nos atualizar sempre. 
 
-Então em um resumo desses 5 anos, minha vida será uma grande atualização constante, onde cada dia desses 5 anos buscarei aprender cada vez. 
+Então em um resumo, minha vida será uma grande atualização constante, onde cada dia desses 5 anos buscarei aprender cada vez. 
 
