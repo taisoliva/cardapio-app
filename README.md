@@ -9,13 +9,7 @@ A aplicação conta com as seguintes as seguintes páginas:
 - Criar (/criar): Responsável por abrir a página de formulários onde você pode navegar pelas tabs disponíveis
 - Menu (/menu/:id) : Responsável por exibir um Menu pelo seu Id. Essa exibição ocorre organizando os produtos por categorias. Nesta mesma página você pode visualizar um produto específico e pedir.
 - Você pode experimentar a aplicação clicando <a href="https://cardapio-app-9dq9.vercel.app/" > aqui</a>
-<p align="center>
-    <img width="50%" src='./src/assets/1.png" />
-    <img width="50%" src='./src/assets/2.png" />
-    <img width="50%" src='./src/assets/3.png" />
-    <img width="50%" src='./src/assets/4.png" />
-    <img width="50%" src='./src/assets/5.png" />
-</p>
+
     
 
         
