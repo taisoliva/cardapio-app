@@ -12,7 +12,7 @@ A aplicação conta com as seguintes as seguintes páginas:
 - Você pode experimentar a aplicação clicando <a href="https://cardapio-app-9dq9.vercel.app/" > aqui</a>
 <table>
   <tr>
-    <td><img width="50%" src="./src/assets/1.png" /></td>
+    <td style="width: 30%;" ><img width="50%" src="./src/assets/1.png" /></td>
     <td><img width="50%" src="./src/assets/2.png" /></td>
     <td><img width="50%" src="./src/assets/3.png" /></td>
     <td><img width="50%" src="./src/assets/4.png" /></td>
