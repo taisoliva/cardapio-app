@@ -16,7 +16,7 @@ export default function Modal({
 
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
-      <div className="flex flex-col  bg-blue-200 w-1/2 h-1/2 shadow-2xl rounded-lg shadow-black  ">
+      <div className="flex flex-col  bg-blue-200 w-4/5 h-4/5 md:w-1/2 md:h-1/2 shadow-2xl rounded-lg shadow-black  ">
         <div
           className="flex w-full justify-end p-1 text-red-600 hover:cursor-pointer"
           onClick={() => {
@@ -32,13 +32,13 @@ export default function Modal({
             src={selectProduct?.image}
           />
           <div className="flex flex-col justify-center items-center w-full font-medium">
-            <p className="mb-2 text-xs md:text-3xl text-center">
+            <p className="mb-2 text-xl md:text-3xl text-center">
               {selectProduct?.name}
             </p>
-            <p className="mb-2 text-center text-xs md:text-lg">
+            <p className="mb-2 text-center text-lg md:text-lg">
               {selectProduct?.description}
             </p>
-            <p className="text-xs md:text-3xl">
+            <p className="text-xl md:text-3xl">
               {selectProduct && `R$ ${(selectProduct.price / 100).toFixed(2)}`}
             </p>
           </div>
