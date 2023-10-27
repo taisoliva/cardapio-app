@@ -1,10 +1,10 @@
 # Cardápio
 
-Aplicação de visualização de Cardápios de acordo com o horário de Brasilia. Nesta Aplicação você pode visualizar os cardápios disponíveis e realizar um pedido ou pode até mesmo criar um Cardápio, Categoria e Produtos. 
+Aplicação de visualização de Cardápios de acordo com o horário de Brasilia. Nesta Aplicação você pode visualizar os cardápios disponíveis e realizar um pedido. Pode até mesmo criar Cardápios, Categorias e Produtos. 
 
 ## Sobre
 
-A aplicação conta com as seguintes as seguintes páginas:
+A aplicação conta com as seguintes páginas:
 - Home (/): Responsável por exibir os cardápios de acordo com o horário
 - Criar (/criar): Responsável por abrir a página de formulários onde você pode navegar pelas tabs disponíveis
 - Menu (/menu/:id) : Responsável por exibir um Menu pelo seu Id. Essa exibição ocorre organizando os produtos por categorias. Nesta mesma página você pode visualizar um produto específico e pedir.
@@ -47,10 +47,10 @@ A aplicação conta com as seguintes as seguintes páginas:
 
 ## Criando formulário
 
-1. Na criação de um Menu é obrigatório passar um nome e escolher entre Diurno ou Noturno, por padrão temos Diurno.
-2. Na criação de uma Categoria é obrigatório passar um nome.
+1. Na criação de um Menu é obrigatório passar um nome e escolher entre Diurno ou Noturno.
+2. Na criação de uma Categória é obrigatório passar um nome.
 3. No Produto todos os campos são obrigatórios, mas se atente para:
      - 3.1 O preço é separado por ponto e não vírgula
-     - 3.2 A image precisa ser uma URL válida, verifique se começa com http por exemplo.
-     - 3.3 A descrição é breve limitada a 150 caracters
-     - 3.4 A categoria e o Menu são os que já estão cadastrados anteriormente.
+     - 3.2 A image precisa ser uma URL válida, verifique se começa com http por exemplo;
+     - 3.3 A descrição é breve limitada a 150 caracters;
+     - 3.4 A categoria e o Menu são selecionados mediante aos dados do banco.
