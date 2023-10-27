@@ -9,4 +9,7 @@ Quando encontrava uma dificuldade ia na documentação, ia em fóruns e no youtu
 2. Biblioteca <a href="https://mui.com/"> Mui Material </a>: O uso na aplicação foi para criação dos Inputs e Buttons dos formulários. Essa biblioteca trás uma estilização e melhora a experiência do usuário com suas estilizações.
 3. Biblioteca <a href="https://www.radix-ui.com/"> Radix </a> : Seu uso foi para criar as tabs nos formulários. Essa biblioteca possui uma infinitade de elementos que você pode utilizar, para a aplicação a criação do formulário tabelado, onde você facilmente consegue alterar.
 4. Biblioteca <a href="https://lucide.dev/guide/packages/lucide-react"> Lucide React </a>: Biblioteca de Icons para React. Todos os ícones da aplicação foram utilizados dessa biblioteca.
-5.  
+5. Biblioteca <a href="https://day.js.org/"> Dayjs </a>: Usada para verificar o horário do acesso e utilizar como timezone a região America/Sao_Paulo que é a região respectiva do horário de Brasília.
+6. Biblioteca <a href="https://www.npmjs.com/package/react-imask"> React I-mask </a>: Usada para criar máscaras nos inputs feitos com o Material MUI
+7. Biblioteca <a href="https://mhnpd.github.io/react-loader-spinner/docs/components/three-dots/"> React Loader Spinner </a>: Biblioteca com vários efeitos visuais de carregamento. Usada na apliação para as telas de loading.
+8. Biblioteca <a href="https://tailwindcss.com/"> Tailwind </a>: Usada para estilizar a página. Tailwind trouxe uma sofisticação ao css com classes de nomes semânticos, possui facil manutenção, já possui responsividade integrada bem como modo dark mode, e além de deixar o código mais legível.
