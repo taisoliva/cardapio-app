@@ -4,20 +4,20 @@ import { postCategory } from '@/services/categoriaApi'
 import { TextField } from '@mui/material'
 import { useState, FormEvent } from 'react'
 import Buttons from '../Buttons'
-import { useRouter } from 'next/navigation'
-import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
-import { toast } from 'react-toastify'
+import { CategoryProtocol } from '@/protocols'
 
 export default function FormCategoria({
   setCurrentTab,
+  categoryData,
+  setCategoryData,
 }: {
   setCurrentTab: (value: string) => void
+  categoryData: CategoryProtocol[]
+  setCategoryData: React.Dispatch<React.SetStateAction<CategoryProtocol[]>>
 }) {
   const [name, setName] = useState<string>('')
   const [isError, setError] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
-
-  const router = useRouter()
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -36,15 +36,15 @@ export default function FormCategoria({
         name,
       }
 
-      try {
-        const promise = await postCategory(body)
-        router.push('/criar')
-        setTimeout(() => {
-          setCurrentTab('tab3')
-          setDisabled(false)
-        }, 5000)
-      } catch (error) {
-        console.log(error)
+      const promise = await postCategory(body)
+      if (promise.ok) {
+        const newCategory = await promise.json()
+        categoryData.push(newCategory)
+        setCategoryData(categoryData)
+        setCurrentTab('tab3')
+        setDisabled(false)
+      } else {
+        alert('Não foi possível criar')
         setDisabled(false)
       }
     }

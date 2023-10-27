@@ -16,6 +16,9 @@ interface Props {
 
 export function SettingTabs({ dataMenus, dataCategory }: Props) {
   const [currentTab, setCurrentTab] = useState('tab1')
+  const [menuData, setMenuData] = useState<MenuProtocol[]>(dataMenus)
+  const [categoryData, setCategoryData] =
+    useState<CategoryProtocol[]>(dataCategory)
 
   return (
     <Tabs.Root value={currentTab} onValueChange={setCurrentTab}>
@@ -39,15 +42,23 @@ export function SettingTabs({ dataMenus, dataCategory }: Props) {
 
       <Box>
         <Tabs.Content value="tab1">
-          <FormMenu setCurrentTab={setCurrentTab} />
+          <FormMenu
+            setCurrentTab={setCurrentTab}
+            menuData={menuData}
+            setMenuData={setMenuData}
+          />
         </Tabs.Content>
 
         <Tabs.Content value="tab2">
-          <FormCategoria setCurrentTab={setCurrentTab} />
+          <FormCategoria
+            setCurrentTab={setCurrentTab}
+            categoryData={categoryData}
+            setCategoryData={setCategoryData}
+          />
         </Tabs.Content>
 
         <Tabs.Content value="tab3">
-          <FormProdutos dataMenus={dataMenus} dataCategory={dataCategory} />
+          <FormProdutos dataMenus={menuData} dataCategory={categoryData} />
         </Tabs.Content>
       </Box>
     </Tabs.Root>

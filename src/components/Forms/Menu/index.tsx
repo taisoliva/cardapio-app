@@ -12,19 +12,22 @@ import {
 import { useState, FormEvent } from 'react'
 import Buttons from '../Buttons'
 import 'react-toastify/dist/ReactToastify.css'
-import { useRouter } from 'next/navigation'
+
+import { MenuProtocol } from '@/protocols'
 
 export default function FormMenu({
   setCurrentTab,
+  menuData,
+  setMenuData,
 }: {
   setCurrentTab: (value: string) => void
+  menuData: MenuProtocol[]
+  setMenuData: React.Dispatch<React.SetStateAction<MenuProtocol[]>>
 }) {
   const [name, setName] = useState<string>('')
   const [selectedOption, setSelectedOption] = useState<string>('diurno')
   const [isError, setError] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
-
-  const router = useRouter()
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -50,11 +53,11 @@ export default function FormMenu({
 
       const promise = await postMenu(body)
       if (promise.ok) {
-        router.push('/criar')
-        setTimeout(() => {
-          setCurrentTab('tab2')
-          setDisabled(false)
-        }, 3000)
+        const newMenu: MenuProtocol = await promise.json()
+        menuData.push(newMenu)
+        setMenuData(menuData)
+        setCurrentTab('tab2')
+        setDisabled(false)
       } else {
         setDisabled(false)
         alert('Não foi possível criar o Menu')
