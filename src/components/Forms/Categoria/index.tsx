@@ -40,8 +40,8 @@ export default function FormCategoria({
         const promise = await postCategory(body)
         console.log(promise)
         setDisabled(false)
-        setCurrentTab('tab3')
         router.push('/criar')
+        setCurrentTab('tab3')
       } catch (error) {
         console.log(error)
         setDisabled(false)
