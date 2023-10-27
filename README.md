@@ -8,8 +8,7 @@ A aplicação conta com as seguintes as seguintes páginas:
 - Home (/): Responsável por exibir os cardápios de acordo com o horário
 - Criar (/criar): Responsável por abrir a página de formulários onde você pode navegar pelas tabs disponíveis
 - Menu (/menu/:id) : Responsável por exibir um Menu pelo seu Id. Essa exibição ocorre organizando os produtos por categorias. Nesta mesma página você pode visualizar um produto específico e pedir.
-- Você pode experimentar a aplicação clicando <a href="https://cardapio-app-9dq9.vercel.app/" ></a>
-
+- Você pode experimentar a aplicação clicando <a href="https://cardapio-app-9dq9.vercel.app/" > aqui</a>
 <div>
     <img width="50%" src='./src/assets/1.png" />
     <img width="50%" src='./src/assets/2.png" />
@@ -17,6 +16,7 @@ A aplicação conta com as seguintes as seguintes páginas:
     <img width="50%" src='./src/assets/4.png" />
     <img width="50%" src='./src/assets/5.png" />
 </div>
+        
 ## Como Rodar
 
 1. Clone este repositório em <a href="https://github.com/taisoliva/cardapio-app"> clique aqui </a>
