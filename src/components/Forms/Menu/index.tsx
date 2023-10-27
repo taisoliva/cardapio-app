@@ -11,8 +11,8 @@ import {
 } from '@mui/material'
 import { useState, FormEvent } from 'react'
 import Buttons from '../Buttons'
-import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { useRouter } from 'next/navigation'
 
 export default function FormMenu({
   setCurrentTab,
@@ -23,6 +23,8 @@ export default function FormMenu({
   const [selectedOption, setSelectedOption] = useState<string>('diurno')
   const [isError, setError] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
+
+  const router = useRouter()
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -50,6 +52,7 @@ export default function FormMenu({
       if (promise.ok) {
         setDisabled(false)
         setCurrentTab('tab2')
+        router.push('/criar')
       } else {
         setDisabled(false)
         alert('Não foi possível criar o Menu')

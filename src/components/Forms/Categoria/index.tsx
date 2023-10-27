@@ -17,7 +17,7 @@ export default function FormCategoria({
   const [isError, setError] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
 
-  const router: AppRouterInstance = useRouter()
+  const router = useRouter()
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -41,6 +41,7 @@ export default function FormCategoria({
         console.log(promise)
         setDisabled(false)
         setCurrentTab('tab3')
+        router.push('/criar')
       } catch (error) {
         console.log(error)
         setDisabled(false)

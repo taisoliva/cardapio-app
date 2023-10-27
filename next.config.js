@@ -22,6 +22,15 @@ const nextConfig = {
         },
       ],
     },
+    {
+      source: '/criar',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'no-store',
+        },
+      ],
+    },
   ],
 }
 
