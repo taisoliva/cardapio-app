@@ -9,7 +9,7 @@ A aplicação conta com as seguintes as seguintes páginas:
 - Criar (/criar): Responsável por abrir a página de formulários onde você pode navegar pelas tabs disponíveis
 - Menu (/menu/:id) : Responsável por exibir um Menu pelo seu Id. Essa exibição ocorre organizando os produtos por categorias. Nesta mesma página você pode visualizar um produto específico e pedir.
 - Você pode experimentar a aplicação clicando <a href="https://cardapio-app-9dq9.vercel.app/" > aqui</a>
-
+<img width="50%" src='./src/assets/1.png" />
     
 
         
@@ -42,7 +42,7 @@ A aplicação conta com as seguintes as seguintes páginas:
 1. Na criação de um Menu é obrigatório passar um nome e escolher entre Diurno ou Noturno, por padrão temos Diurno.
 2. Na criação de uma Categoria é obrigatório passar um nome.
 3. No Produto todos os campos são obrigatórios, mas se atente para:
-     3.1 O preço é separado por ponto e não vírgula
-     3.2 A image precisa ser uma URL válida, verifique se começa com http por exemplo.
-     3.3 A descrição é breve limitada a 150 caracters
-     3.4 A categoria e o Menu sãi os que já estão cadastrados anteriormente.
+     - 3.1 O preço é separado por ponto e não vírgula
+     - 3.2 A image precisa ser uma URL válida, verifique se começa com http por exemplo.
+     - 3.3 A descrição é breve limitada a 150 caracters
+     - 3.4 A categoria e o Menu sãi os que já estão cadastrados anteriormente.
