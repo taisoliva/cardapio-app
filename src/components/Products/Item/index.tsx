@@ -14,7 +14,7 @@ export default function ItemProduct({
     >
       <>
         <img
-          className="w-1/2 md:w-48 lg:w-48 p-2 border-2 rounded"
+          className="w-1/2 h-48 md:w-48 lg:w-48 p-2 border-2 rounded"
           src={image}
         />
         <div className="flex flex-col w-full ml-2 items-center justify-center ">
